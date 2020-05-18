@@ -1,0 +1,19 @@
+create schema stage;
+use stage;
+
+-- Staging Database
+create table staging(
+	stage_id INT AUTO_INCREMENT PRIMARY KEY,
+    yr INT,
+    state_name varchar(30),
+	min_wage_law float,
+	min_wage_real float,
+	cpi_avg float,
+	state_debt float,
+	local_debt float,
+	state_local_debt float,
+	gross_state_product float,
+	population_mil float,
+	debt_percent_gsp float,
+	state_id int
+);
