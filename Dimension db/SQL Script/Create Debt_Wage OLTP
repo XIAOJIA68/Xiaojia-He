@@ -1,0 +1,24 @@
+create schema debt_and_wage;
+use debt_and_wage;
+
+-- Data state name will never exceed 30
+create table state(
+	state_id  INT AUTO_INCREMENT PRIMARY KEY,
+	state_name varchar(30)
+);
+-- Statistics
+create table  statistics(
+	stat_id INT AUTO_INCREMENT PRIMARY KEY,
+	yr INT,
+	min_wage_law float,
+	min_wage_real float,
+	cpi_avg float,
+	state_debt float,
+	local_debt float,
+	state_local_debt float,
+	gross_state_product float,
+	population_mil float,
+	debt_percent_gsp float,
+	state_id int,
+	FOREIGN KEY (state_id) REFERENCES state(state_id)
+);
