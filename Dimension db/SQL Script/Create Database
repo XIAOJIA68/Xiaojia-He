@@ -1,0 +1,29 @@
+create schema dw_debt_wage;
+use dw_debt_wage;
+
+-- Data state name will never exceed 30
+create table state_dim(
+	state_id  INT AUTO_INCREMENT PRIMARY KEY,
+	state_name varchar(30)
+);
+create table date_dim(
+	date_id INT AUTO_INCREMENT PRIMARY KEY,
+    yr INT
+);
+-- Statistics
+create table  statistics_fact(
+	stat_id INT AUTO_INCREMENT PRIMARY KEY,
+	min_wage_law float,
+	min_wage_real float,
+	cpi_avg float,
+	state_debt float,
+	local_debt float,
+	state_local_debt float,
+	gross_state_product float,
+	population_mil float,
+	state_id int,
+     yr INT,
+     date_id INT,
+	FOREIGN KEY (state_id) REFERENCES state_dim(state_id),
+    FOREIGN KEY (date_id) REFERENCES date_dim(date_id)
+);
