@@ -8,7 +8,7 @@ create table state_dim(
 );
 create table date_dim(
 	date_id INT AUTO_INCREMENT PRIMARY KEY,
-    yr INT
+    	yr INT
 );
 -- Statistics
 create table  statistics_fact(
@@ -20,6 +20,7 @@ create table  statistics_fact(
 	local_debt float,
 	state_local_debt float,
 	gross_state_product float,
+    real_state_growth float,
 	population_mil float,
 	state_id int,
      yr INT,
