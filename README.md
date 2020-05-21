@@ -17,6 +17,7 @@ You can prepare the virtual environment libraries through one of two ways
 
   1 create a Linux virtual environment on virtual box.
   2 Download the Packages from Pypi for linux.
+  
 https://youtu.be/ItE6MAZaiJY This video is good however it uses powershell instead of cmd, cmd was used here in the project instead and instead of activate.ps1 do activate.bat to create the virtual environement.
 
 Creating the virtual environment with numpy,pandas....etc
