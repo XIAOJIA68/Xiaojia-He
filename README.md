@@ -23,3 +23,9 @@ https://youtu.be/ItE6MAZaiJY This video is good however it uses powershell inste
 
 
 Creating the virtual environment with numpy,pandas....etc
+
+
+
+Here is the link to tableau public
+
+https://public.tableau.com/profile/sun.hee.park#!/vizhome/AnalyzingUSGSandMinWageData/Dashboard1
