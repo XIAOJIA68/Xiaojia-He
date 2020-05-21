@@ -1,4 +1,4 @@
-create schema stage;
+create schema staging_data;
 use stage;
 
 -- Staging Database
