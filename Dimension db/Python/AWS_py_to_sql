@@ -1,0 +1,16 @@
+#now send this data to SQL!
+#reference: https://stackoverflow.com/questions/30631325/writing-to-mysql-database-with-pandas-using-sqlalchemy-to-sql
+import pymysql
+from sqlalchemy import create_engine
+
+user = 'admin'
+passw = 'Oldtimeroad1'
+host =  'debt-warehouse.czc8l55xy1hd.us-east-1.rds.amazonaws.com'  # Data-warehouse
+port = 3306 
+database = 'staging_data'
+
+# Creating the engine
+mydb = create_engine('mysql+pymysql://' + user + ':' + passw + '@' + host + ':' + str(port) + '/' + database , echo=False)
+
+# Transfering it to the mysql database
+for_sql.to_sql(name='prep', con=mydb, if_exists = 'append', index=False)
