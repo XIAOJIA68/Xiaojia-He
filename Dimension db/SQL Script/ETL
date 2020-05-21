@@ -1,0 +1,28 @@
+-- removing foreign restrictions
+SET SQL_SAFE_UPDATES = 0;
+SET FOREIGN_KEY_CHECKS=0;
+
+-- delete from dw_debt_wage.statistics_fact;
+INSERT dw_debt_wage.date_dim (yr) SELECT distinct(yr) FROM staging_data.prep;
+
+-- delete from dw_debt_wage.state_dim;
+INSERT dw_debt_wage.state_dim (state_name) SELECT distinct(state) FROM staging_data.prep;
+
+--  fact table is filled by row.
+INSERT dw_debt_wage.statistics_fact (min_wage_law  ,min_wage_real ,cpi_avg 
+			,state_debt ,local_debt ,state_local_debt 
+            ,gross_state_product,real_state_growth ,population_mil, date_id,state_id)
+SELECT min_wage_by_law, min_wage_real, cpi_average
+		,state_Debt,local_debt,state_and_local_debt,
+       gross_state_product, real_state_growth, population_Mil, date_id,state_id
+       FROM staging_data.prep a 
+       left join dw_debt_wage.state_dim b
+       on a.state = b.state_name
+       left join dw_debt_wage.date_dim c
+       on a.yr = c.yr;
+       
+-- No need for the yr now
+ALTER TABLE dw_debt_wage.statistics_fact
+DROP yr;       
+-- reconnecting the foreign keys.
+SET FOREIGN_KEY_CHECKS= 1;
