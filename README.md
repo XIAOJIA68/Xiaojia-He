@@ -15,6 +15,35 @@ How to visualize the data: https://medium.com/@omarmoh.said/quick-fix-on-choosin
 Move from python to mysql database: https://medium.com/@omarmoh.said/python-to-mysql-aws-cbc8aa38ef15 Roles:
 
 
+
+# Step2: Clearn the data and merge the two csv together
+Merge the data through an inner join
+
+full = pd.merge(df1,df2,on=['State','Year'])
+
+# Step3: create the staging schema:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Virtual environment preperation for lambda
 You can prepare the virtual environment libraries through one of two ways
 
