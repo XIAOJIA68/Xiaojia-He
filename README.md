@@ -21,17 +21,37 @@ Merge the data through an inner join
 
 full = pd.merge(df1,df2,on=['State','Year'])
 
-# Step3: create the staging schema: 
+# Step3: Create dimensinal modeling
+
+![](Images/dimension_modeling.png)
+
+# Step4: create the staging schema: 
 
 ![](Images/staging_picture.png)
 
-# Step4: Transfer the python dataframe data to mysql staging table:
+# Step5: Transfer the python dataframe data to mysql staging table:
 
 ![](Images/tran_script.png)
 
 ### the columns of staging schema should be the same with the dataframe columns
 
 ![](Images/transfer_to_sql.png)
+
+
+# Step6: transfer staging data to denmension modeling database
+
+(Beacause modeling has the dim table and fact so we create staging schema to store all the data then use select and insert method to transfer data to model)
+
+dim tables:
+
+![](Images/dimtables.png)
+
+fact tables:
+
+
+![](Images/facttable.png)
+
+
 
 
 
