@@ -21,9 +21,15 @@ Merge the data through an inner join
 
 full = pd.merge(df1,df2,on=['State','Year'])
 
-# Step3: create the staging schema:
+# Step3: create the staging schema: 
 
+![](Images/staging_picture.png)
 
+# Step4: Transfer the python dataframe data to mysql staging table
+
+### the columns of staging schema should be the same with the dataframe columns
+
+![](Images/transfer_to_sql.png)
 
 
 
