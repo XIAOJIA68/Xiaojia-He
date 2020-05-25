@@ -27,7 +27,7 @@ full = pd.merge(df1,df2,on=['State','Year'])
 
 # Step4: Transfer the python dataframe data to mysql staging table:
 
-![](Images/transfer_to_sql.png)
+![](Images/tran_script.png)
 
 ### the columns of staging schema should be the same with the dataframe columns
 
