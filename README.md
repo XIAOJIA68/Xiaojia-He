@@ -86,6 +86,10 @@ https://youtu.be/ItE6MAZaiJY This video is good however it uses powershell inste
 Creating the virtual environment with numpy,pandas....etc
 
 
+Data Visualization with Tableau:
+
+![](Images/facttable.png)
+
 
 Here is the link to tableau public
 
