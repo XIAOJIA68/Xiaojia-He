@@ -88,7 +88,7 @@ Creating the virtual environment with numpy,pandas....etc
 
 Data Visualization with Tableau:
 
-![](Images/facttable.png)
+![](Images/Tableau.png)
 
 
 Here is the link to tableau public
